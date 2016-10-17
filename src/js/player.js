@@ -358,6 +358,8 @@ class Player extends Component {
      */
     this.scrubbing_ = false;
 
+    this.plugins_ = {};
+
     this.el_ = this.createEl();
 
     // We also want to pass the original player options to each component and plugin
@@ -3554,6 +3556,8 @@ TECH_EVENTS_RETRIGGER.forEach(function(event) {
     return this.trigger(event);
   };
 });
+
+/* document methods */
 
 /**
  * Fired when the player has initial duration and dimension information

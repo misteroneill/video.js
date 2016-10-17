@@ -13,7 +13,7 @@ import Component from './component';
 import EventTarget from './event-target';
 import * as Events from './utils/events.js';
 import Player from './player';
-import plugin from './plugins.js';
+import registerPlugin from './plugins.js';
 import mergeOptions from './utils/merge-options.js';
 import * as Fn from './utils/fn.js';
 import TextTrack from './tracks/text-track.js';
@@ -444,7 +444,7 @@ videojs.bind = Fn.bind;
  * **See the plugin guide in the docs for a more detailed example**
  * ```js
  *     // Make a plugin that alerts when the player plays
- *     videojs.plugin('myPlugin', function(myPluginOptions) {
+ *     videojs.registerPlugin('myPlugin', function(myPluginOptions) {
  *       myPluginOptions = myPluginOptions || {};
  *
  *       var player = this;
@@ -478,7 +478,7 @@ videojs.bind = Fn.bind;
  *
  * @borrows plugin:plugin as videojs.plugin
  */
-videojs.plugin = plugin;
+videojs.registerPlugin = registerPlugin;
 
 /**
  * Adding languages so that they're available to all players.
