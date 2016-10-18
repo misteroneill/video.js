@@ -480,6 +480,11 @@ videojs.bind = Fn.bind;
  */
 videojs.registerPlugin = registerPlugin;
 
+videojs.plugin = (...args) => {
+  log.warn('videojs.plugin() is deprecated; use videojs.registerPlugin() instead');
+  return videojs.registerPlugin(...args);
+};
+
 /**
  * Adding languages so that they're available to all players.
  * ```js
