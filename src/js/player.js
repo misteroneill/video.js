@@ -358,7 +358,7 @@ class Player extends Component {
      */
     this.scrubbing_ = false;
 
-    this.activePlugins_ = {};
+    this.plugins_ = {};
     this.el_ = this.createEl();
 
     // We also want to pass the original player options to each component and plugin
@@ -3351,7 +3351,7 @@ class Player extends Component {
    * @return {Boolean}
    */
   usingPlugin(name) {
-    return !!(this.activePlugins_ && this.activePlugins_[name]);
+    return !!(this.plugins_ && this.plugins_[name]);
   }
 
   /**
