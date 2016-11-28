@@ -3350,6 +3350,7 @@ class Player extends Component {
    *         The name of a plugin.
    *
    * @return {boolean}
+   *         Whether or not this player has the requested plugin available.
    */
   hasPlugin(name) {
     // While a no-op by default, this method is created in plugin.js to avoid
@@ -3366,6 +3367,7 @@ class Player extends Component {
    *         The name of a plugin.
    *
    * @return {boolean}
+   *         Whether or not this player is using the requested plugin.
    */
   usingPlugin(name) {
     // While a no-op by default, this method is created in plugin.js to avoid
